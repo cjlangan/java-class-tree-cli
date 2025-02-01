@@ -76,34 +76,43 @@ func main() {
             }
         }
     }
+
     // Print the nodes
     for _, node := range graph {
         if(!node.hasParent) {
-            node.printNode(0);
+            done := make([]bool, len(graph));
+            node.printNode(0, done);
         }
     }
 }
 
 // Print node, then its children
-func (n *Node) printNode(indent int) {
-    fmt.Print("─");
+func (n *Node) printNode(indent int, done []bool) {
+    if indent != 0 {
+        fmt.Print("─");
+    } 
     fmt.Println(n.class);
 
     // Print children
     i := 0;
     for _, node := range n.subs {
         // Spacing
-        for j := 0; j < indent + 1; j++ {
-            fmt.Print(" ");
+        for j := 0; j < indent * 3; j++ {
+            if j % 3 == 0 && !done[j] {
+                fmt.Print("│");
+            } else {
+                fmt.Print(" ");
+            }
         }
 
         // determine if last
         if i == len(n.subs) - 1 {
             fmt.Print("└");
+            done[indent] = true;
         } else {
             fmt.Print("├");
         }
-        node.printNode(indent + 1);
+        node.printNode(indent + 1, done);
         i++;
     }
 }
