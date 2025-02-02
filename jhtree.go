@@ -97,11 +97,11 @@ func (n *Node) printNode(indent int, done []bool) {
     i := 0;
     for _, node := range n.subs {
         // Spacing
-        for j := 0; j < indent * 3; j++ {
-            if j % 3 == 0 && !done[j] {
-                fmt.Print("│");
+        for j := 0; j < indent; j++ {
+            if !done[j] {
+                fmt.Print("│  ");
             } else {
-                fmt.Print(" ");
+                fmt.Print("   ");
             }
         }
 
