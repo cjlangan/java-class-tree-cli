@@ -4,7 +4,7 @@
 
 ## Usage 
 
-Simple run `jhtree <directory>`. Such as `jhtree .` for the current directory:
+Simply run `jhtree <directory>`. Such as `jhtree .` for the current directory:
 
 ```
 MealTracker
