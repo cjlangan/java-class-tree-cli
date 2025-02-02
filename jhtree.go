@@ -131,9 +131,10 @@ func getClassAndParent(lines []string) (string, string) {
     class := "";
     parent := "";
 
-    // Find class line
+    // Find class line, skipping comment lines
     for !done {
-        if strings.Contains(lines[i], "class") {
+        if  !strings.HasPrefix(strings.TrimSpace(lines[i]), "//") && 
+            strings.Contains(lines[i], "class") {
             done = true;
         } else {
             i++;
