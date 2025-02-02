@@ -29,8 +29,27 @@ Node
 
 ## Installation
 
+### Linux
+
 Run this command to install: 
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/cjlangan/java-class-tree-cli/main/install.sh | sh
+```
+
+### Windows 
+
+Download `jhtree.exe` from the releases page.
+
+Move it to a folder in your PATH, such as `C:\Program Files\jhtree\`
+
+### MacOS
+
+Download `jhtree-mac` from the releases page. 
+
+Open a terminal and run: 
+
+```bash
+chmod +x jhtree-mac 
+sudo mv jhtree-mac /usr/local/bin/jhtree
 ```

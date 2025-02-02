@@ -1,6 +1,6 @@
 #!/bin/sh
-echo "Downloading myprogram..."
+echo "Downloading jhtree..."
 curl -L -o jhtree https://github.com/cjlangan/java-class-tree-cli/releases/latest/download/jhtree-linux
 chmod +x jhtree
-sudo mv myprogram /usr/local/bin/
+sudo mv jhtree /usr/local/bin/
 echo "Installation complete! Run 'jhtree <directory>' to start."
