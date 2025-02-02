@@ -94,8 +94,7 @@ func (n *Node) printNode(indent int, done []bool) {
     fmt.Println(n.class);
 
     // Print children
-    i := 0;
-    for _, node := range n.subs {
+    for i, node := range n.subs {
         // Spacing
         for j := 0; j < indent; j++ {
             if !done[j] {
@@ -113,7 +112,6 @@ func (n *Node) printNode(indent int, done []bool) {
             fmt.Print("├");
         }
         node.printNode(indent + 1, done);
-        i++;
     }
 }
 
