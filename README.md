@@ -1,6 +1,6 @@
 # jhtree 
 
-#### A tool to print you java class hierarchy 
+#### A tool to print your Java Project's class hierarchy 
 
 ## Usage 
 
@@ -53,3 +53,9 @@ Open a terminal and run:
 chmod +x jhtree-mac 
 sudo mv jhtree-mac /usr/local/bin/jhtree
 ```
+
+## Remarks 
+
+- This assumes that all Java files are in the same folder
+- This has not been tested on windows or mac yet, lmk if it works!
+- This was my first time using Go to program
