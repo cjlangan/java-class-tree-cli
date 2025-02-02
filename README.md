@@ -43,6 +43,12 @@ Download `jhtree.exe` from the releases page.
 
 Move it to a folder in your PATH, such as `C:\Program Files\jhtree\`
 
+In your start menu search for "Edit Environment Variables"
+
+In System Variable, choose `path` and select `edit`
+
+Now add a `new` path: the directory where jhtree is located, such as `C:\Program Files\jhtree\`
+
 ### MacOS
 
 Download `jhtree-mac` from the releases page. 
@@ -57,5 +63,4 @@ sudo mv jhtree-mac /usr/local/bin/jhtree
 ## Remarks 
 
 - This assumes that all Java files are in the same folder
-- This has not been tested on windows or mac yet, lmk if it works!
 - This was my first time using Go to program
